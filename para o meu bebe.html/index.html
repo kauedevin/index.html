@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>PARA A PESSOA MAIS LINDA DO MUNDO</title>
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0; padding: 0;
+      background: linear-gradient(135deg, #5a0000, #2c0000);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: #e8d7a9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 0 0 5px #800000;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    form.interaction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(232, 215, 169, 0.15);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(232, 215, 169, 0.4);
+      min-width: 320px;
+      max-width: 450px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .buttons {
+      margin-bottom: 25px;
+      display: flex;
+      gap: 25px;
+    }
+
+    label {
+      padding: 15px 40px;
+      font-size: 20px;
+      border-radius: 100px;
+      background-color: #e8d7a9;
+      color: #6b2b25;
+      font-weight: 600;
+      user-select: none;
+      transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(232, 215, 169, 0.5);
+      box-sizing: border-box;
+    }
+
+    label:hover {
+      background-color: #f0e6c9;
+      color: #2c0000;
+      box-shadow: 0 6px 15px rgba(232, 215, 169, 0.8);
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #f0e6c9;
+      color: #2c0000;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(232, 215, 169, 0.9);
+    }
+
+    .message {
+      display: none;
+      font-size: 1.6rem;
+      text-align: center;
+      max-width: 400px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      color: #f7f1d1;
+      text-shadow: 1px 1px 3px #6b2b25;
+    }
+
+    #sim:checked ~ .msg-sim {
+      display: block;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    #nao:checked ~ .msg-nao {
+      display: block;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    img {
+      margin-top: 15px;
+      max-width: 180px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(232, 215, 169, 0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    button[type="reset"] {
+      padding: 10px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      border: none;
+      background-color: #e8d7a9;
+      color: #2c0000;
+      cursor: pointer;
+      transition: background-color 0.4s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 12px rgba(232, 215, 169, 0.6);
+      user-select: none;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #f0e6c9;
+      box-shadow: 0 8px 18px rgba(232, 215, 169, 0.85);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <h1>Você Me Ama?</h1>
+
+  <form class="interaction">
+    <input type="radio" id="sim" name="resposta" />
+    <input type="radio" id="nao" name="resposta" />
+
+    <div class="buttons">
+      <label for="sim">SIM</label>
+      <label for="nao">NÃO</label>
+    </div>
+
+    <div class="message msg-sim">
+  eu sabia eu sou o rei da lábia eheheh te amo bem mais ❤️<br/>
+  <img src="5a5294e5-b62e-41d9-84fe-1c966ee71c71.webp" alt="te amooooo meu bem">
+</div>
+    <div class="message msg-nao">hm... vc me ama sim rum...<br/><img src="3143998c-7131-4adb-9e85-cc800dabbc0d.webp" alt="figurinha fofa"/></div>
+
+    <button type="reset">Reiniciar</button>
+  </form>
+</body>
+</html>
